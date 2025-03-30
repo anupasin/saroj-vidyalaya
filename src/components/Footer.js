@@ -1,43 +1,55 @@
+import styles from '@/styles/Home.module.css';
+
 export default function Footer() {
-    const links = [
-      {
-        title: "Discover More",
-        items: ["Our Story", "Teaching Philosophy", "Parent Testimonials", "FAQ"]
-      },
-      {
-        title: "Learning Resources",
-        items: ["Nature Activities", "Playful Worksheets", "Parent Guides", "Educator Tools"]
-      },
-      {
-        title: "Connect With Us",
-        items: ["Contact Us", "Support", "Newsletter", "Community"]
-      },
-      {
-        title: "Legal",
-        items: ["Terms of Service", "Privacy Policy", "Cookie Policy", "Accessibility"]
-      }
-    ];
-  
-    return (
-      <footer>
-        <div className="container">
-          <div className="footer-content">
-            {links.map((section, index) => (
-              <div key={index} className="footer-column">
-                <h3>{section.title}</h3>
-                <ul>
-                  {section.items.map((item, i) => (
-                    <li key={i}><a href="#">{item}</a></li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          
-          <div className="copyright">
-            <p>&copy; 2025 SarojVidyalaya. All rights reserved.</p>
-          </div>
+  const footerLinks = {
+    "Discover More": [
+      { name: "Our Story", href: "#" },
+      { name: "Teaching Philosophy", href: "#" },
+      { name: "Parent Testimonials", href: "#" },
+      { name: "FAQ", href: "#" }
+    ],
+    "Learning Resources": [
+      { name: "Nature Activities", href: "#" },
+      { name: "Playful Worksheets", href: "#" },
+      { name: "Parent Guides", href: "#" },
+      { name: "Educator Tools", href: "#" }
+    ],
+    "Connect With Us": [
+      { name: "Contact Us", href: "#" },
+      { name: "Support", href: "#" },
+      { name: "Newsletter", href: "#" },
+      { name: "Community", href: "#" }
+    ],
+    "Legal": [
+      { name: "Terms of Service", href: "#" },
+      { name: "Privacy Policy", href: "#" },
+      { name: "Cookie Policy", href: "#" },
+      { name: "Accessibility", href: "#" }
+    ]
+  };
+
+  return (
+    <footer className={styles.footer}>
+      <div className="container">
+        <div className={styles.footerContent}>
+          {Object.entries(footerLinks).map(([category, links], index) => (
+            <div key={index} className={styles.footerColumn}>
+              <h3>{category}</h3>
+              <ul>
+                {links.map((link, linkIndex) => (
+                  <li key={linkIndex}>
+                    <a href={link.href}>{link.name}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
-      </footer>
-    );
-  }
+        
+        <div className={styles.copyright}>
+          <p>&copy; 2025 SarojVidyalaya. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}

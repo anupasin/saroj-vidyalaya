@@ -1,41 +1,47 @@
+import styles from '@/styles/Home.module.css';
+import Image from 'next/image';
+
 export default function Features() {
-    const features = [
-      {
-        title: "Playful Learning",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-      },
-      {
-        title: "Nature-Inspired Education",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-      },
-      {
-        title: "Holistic Development",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-      }
-    ];
-  
-    return (
-      <section className="features nature-elements">
-        <div className="leaf">🍃</div>
-        <div className="leaf">🌿</div>
-        <div className="leaf">🍂</div>
-        <div className="leaf">🌱</div>
-        <div className="container">
-          <h2 className="section-title">Why Choose SarojVidyalaya?</h2>
-          <div className="features-grid">
-            {features.map((feature, index) => (
-              <div key={index} className="feature-card">
-                <div className="feature-img">
-                  <img src="/images/placeholder.png" alt={feature.title} />
-                </div>
-                <div className="feature-content">
-                  <h3>{feature.title}</h3>
-                  <p>{feature.description}</p>
-                </div>
+  const features = [
+    {
+      title: "Playful Learning",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      image: "/images/placeholder-400x200.jpg"
+    },
+    {
+      title: "Nature-Inspired Education",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      image: "/images/placeholder-400x200.jpg"
+    },
+    {
+      title: "Holistic Development",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      image: "/images/placeholder-400x200.jpg"
+    }
+  ];
+
+  return (
+    <section className={`${styles.features} ${styles.natureElements}`}>
+      <div className={styles.leaf}>🍃</div>
+      <div className={styles.leaf}>🌿</div>
+      <div className={styles.leaf}>🍂</div>
+      <div className={styles.leaf}>🌱</div>
+      <div className="container">
+        <h2 className={styles.sectionTitle}>Why Choose SarojVidyalaya?</h2>
+        <div className={styles.featuresGrid}>
+          {features.map((feature, index) => (
+            <div key={index} className={styles.featureCard}>
+              <div className={styles.featureImg}>
+                <Image src={feature.image} alt={feature.title} width={400} height={200} />
               </div>
-            ))}
-          </div>
+              <div className={styles.featureContent}>
+                <h3>{feature.title}</h3>
+                <p>{feature.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
+}
