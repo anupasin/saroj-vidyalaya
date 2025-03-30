@@ -1,7 +1,16 @@
+"use client";
+
+import { useState } from 'react';
 import styles from '@/styles/Home.module.css';
 import LotusIcon from './ui/LotusIcon';
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className={styles.header}>
       <div className="container">
@@ -12,7 +21,10 @@ export default function Header() {
             </div>
             Saroj<span>Vidyalaya</span>
           </div>
-          <ul className={styles.navLinks}>
+          <div className={styles.hamburger} onClick={toggleMenu}>
+            &#9776; {/* Hamburger icon */}
+          </div>
+          <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
             <li><a href="#">Home</a></li>
             <li><a href="#">Learning</a></li>
             <li><a href="#">About</a></li>

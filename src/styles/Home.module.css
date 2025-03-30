@@ -29,6 +29,12 @@
     align-items: center;
   }
   
+  .hamburger {
+    display: none; /* Hide by default */
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
   .navLinks {
     display: flex;
     list-style: none;
@@ -47,6 +53,31 @@
   
   .navLinks a:hover {
     color: #f3e5ab;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block; /* Show hamburger on small screens */
+    }
+
+    .navLinks {
+      display: none; /* Hide links by default */
+      flex-direction: column;
+      position: absolute;
+      top: 60px; /* Adjust based on your header height */
+      right: 0;
+      background-color: #9b8f82; /* Match header background */
+      width: 100%;
+      z-index: 10;
+    }
+
+    .navLinks.active {
+      display: flex; /* Show links when active */
+    }
+
+    .navLinks li {
+      margin: 10px 0; /* Adjust spacing for vertical layout */
+    }
   }
   
   /* Hero Section */
