@@ -1,6 +1,6 @@
 /* Header Styles */
 .header {
-    background-color: #7aa07d;
+  background-color: #9b8f82;
     color: white;
     padding: 20px 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -51,7 +51,7 @@
   
   /* Hero Section */
   .hero {
-    background: linear-gradient(135deg, #7aa07d, #a7c4a0);
+    background: linear-gradient(135deg, #d6c7b9, #a89d8e);
     padding: 100px 0;
     color: white;
     text-align: center;

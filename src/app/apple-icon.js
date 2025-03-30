@@ -3,8 +3,8 @@ import { ImageResponse } from 'next/og'
 export const runtime = 'edge'
 
 export const size = {
-  width: 32,
-  height: 32,
+  width: 180,
+  height: 180,
 }
 export const contentType = 'image/png'
 
@@ -22,7 +22,7 @@ export default function Icon() {
           borderRadius: '8%',
         }}
       >
-        <svg width="28" height="28" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <svg width="160" height="160" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
           {/* Outer Petals Layer */}
           <path d="M100,20 C120,40 140,70 130,100 C140,70 160,40 180,50 C160,60 140,90 130,110 C150,90 170,80 190,90 C170,100 150,110 130,120 C150,120 170,120 180,140 C160,130 140,130 120,130 C130,150 150,170 140,190 C120,170 110,150 100,130 C90,150 80,170 60,190 C50,170 70,150 80,130 C60,130 40,130 20,140 C30,120 50,120 70,120 C50,110 30,100 10,90 C30,80 50,90 70,110 C60,90 40,60 20,50 C40,40 60,70 70,100 C60,70 40,40 20,20 C40,30 60,40 80,70 C80,50 70,30 60,10 C80,20 90,40 90,70 C100,50 110,30 120,10 C110,30 100,50 100,70 Q100,45 100,20" fill="#cc66ff" />
           
@@ -35,6 +35,12 @@ export default function Icon() {
           {/* Center of Lotus */}
           <circle cx="100" cy="90" r="15" fill="#ffcc00" />
           <circle cx="100" cy="90" r="10" fill="#ff9900" />
+          
+          {/* Stylistic details for center */}
+          <circle cx="96" cy="86" r="2" fill="#ffeb99" />
+          <circle cx="104" cy="94" r="2" fill="#ffeb99" />
+          <circle cx="96" cy="94" r="1.5" fill="#ffeb99" />
+          <circle cx="104" cy="86" r="1.5" fill="#ffeb99" />
         </svg>
       </div>
     ),
