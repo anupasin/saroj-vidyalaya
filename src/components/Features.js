@@ -6,17 +6,17 @@ export default function Features() {
     {
       title: "Playful Learning",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-      image: "/images/playful learning.jpeg"
+      image: "/images/playful learning.png"
     },
     {
       title: "Nature-Inspired Education",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-      image: "/images/nature inspired.jpeg"
+      image: "/images/nature inspired.png"
     },
     {
       title: "Holistic Development",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-      image: "/images/holistic development.jpeg"
+      image: "/images/holistic development.png"
     }
   ];
 
