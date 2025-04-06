@@ -466,7 +466,7 @@
     .lotusWrapper {
       width: 400px; /* Much smaller lotus on mobile */
       height: 400px;
-      margin-bottom: 15px;
+      margin-bottom: 5px;
     }
     
     .hero h1 {
