@@ -457,3 +457,33 @@
     color: #d1e0cd;
     font-size: 14px;
   }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 20px 0 30px; /* Further reduced padding */
+    }
+    
+    .lotusWrapper {
+      width: 200px; /* Much smaller lotus on mobile */
+      height: 200px;
+      margin-bottom: 15px;
+    }
+    
+    .hero h1 {
+      font-size: 28px; /* Smaller than the 36px in your globals.css */
+      margin-bottom: 10px;
+    }
+    
+    .hero p {
+      font-size: 16px;
+      max-width: 100%;
+      margin: 0 auto 15px;
+      padding: 0 10px; /* Add some padding to prevent text touching edges */
+    }
+    
+    /* Make the button slightly smaller if needed */
+    .hero button, .hero .btn {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
