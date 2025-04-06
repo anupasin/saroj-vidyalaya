@@ -464,8 +464,8 @@
     }
     
     .lotusWrapper {
-      width: 200px; /* Much smaller lotus on mobile */
-      height: 200px;
+      width: 400px; /* Much smaller lotus on mobile */
+      height: 400px;
       margin-bottom: 15px;
     }
     
