@@ -81,40 +81,92 @@
   }
   
   /* Hero Section */
+
   .hero {
     background: linear-gradient(135deg, #d6c7b9, #a89d8e);
-    padding: 100px 0;
+    padding: 20px 0 40px; /* Reduced padding on top and bottom */
     color: white;
     text-align: center;
     position: relative;
     overflow: hidden;
   }
-  
-  .hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+
+  .heroContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%; /* Ensure content doesn't overflow container width */
+  }
+
+  .lotusWrapper {
+    width: 400px;
+    height: 400px;
+    margin-bottom: 5px;
+    display: flex; /* This helps contain the SVG */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lotusWrapper svg {
+    max-width: 100%; /* Ensure SVG doesn't overflow its container */
+    max-height: 100%;
+  }
+
+  .textWrapper {
+    max-width: 800px;
+    width: 100%; /* Full width up to max-width */
+
   }
   
-  .hero p {
-    font-size: 20px;
-    max-width: 600px;
-    margin: 0 auto 30px;
-  }
-  
-  .heroLotus {
+
+  .heroBackground {
     position: absolute;
-    opacity: 0.1;
-    width: 500px;
-    height: 500px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
   }
   
   .heroContent {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .heroLotus {
+    width: 500px;
+    height: 500px;
+    opacity: 0.6;
+  }
+
+  .heroContent {
+    position: relative;
     z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 250px; /* Creates space for the lotus to be visible above */
+  }
+  
+  .heroText {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 20px;
   }
   
   /* Button */
